@@ -43,15 +43,16 @@ const rnz = {
 				document.getElementById('header').classList.toggle('active');
 			}
 
-			if(evt.target.matches('[data-action="scrollto"]') || evt.target.matches('a.scrollto') || evt.target.matches('li.scrollto > a')){
+			const scrollToLink = evt.target.closest?.('[data-action="scrollto"], a.scrollto, li.scrollto > a');
+			if(scrollToLink){
 				evt.preventDefault();
-				let href = evt.target.getAttribute('href'), target = false;
+				let href = scrollToLink.getAttribute('href'), target = false;
 
 				if( href.startsWith('#') ){
 					target = href=='#' ? null : document.querySelector(href);
-				} else if ( href.includes('#') && rnz.sameUrl(href) ){
-					const url = new URL(href);
-					target = url.hash ? document.querySelector(url.hash) : null;
+				} else if ( href.includes('#') ){
+					const url = new URL(href, window.location.href);
+					target = url.hash ? (url.hash=='#' ? null : document.querySelector(url.hash)) : null;
 				}
 
 				if( false !== target ){
@@ -61,9 +62,10 @@ const rnz = {
 				}
 			}
 
-			if(evt.target.matches('[data-action="scrolltotab"]') || evt.target.matches('a.scrolltotab') || evt.target.matches('li.scrolltotab > a')){
+			const scrollToTabLink = evt.target.closest?.('[data-action="scrolltotab"], a.scrolltotab, li.scrolltotab > a');
+			if(scrollToTabLink){
 				evt.preventDefault();
-				let href = evt.target.getAttribute('href'), target = false;
+				let href = scrollToTabLink.getAttribute('href'), target = false;
 
 				if( href.startsWith('#') ){
 					target = href=='#' ? false : href;
