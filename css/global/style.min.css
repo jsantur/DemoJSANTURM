@@ -797,7 +797,7 @@ body{
 /* BLOG */
 .blog-header{
     --content-width:1100px;
-    background: linear-gradient(90deg, #4CAD36 0%, #69D850 64.4%);
+    background: linear-gradient(90deg, #07294e 0%, #0a3a6b 100%);
     min-height:265px;
     display: flex;
     flex-direction:column;

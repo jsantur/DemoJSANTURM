@@ -71,15 +71,15 @@ img, svg, button, input[type=submit]{
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background:#fff; 
+    background: #fff;
 }
-::-webkit-scrollbar-thumb{
-    background:#4CAD36;
-    border-radius:10px;
-    transition:all .2s linear;
+::-webkit-scrollbar-thumb {
+    background: #07294e;
+    border-radius: 10px;
+    transition: all 0.2s linear;
 }
-::-webkit-scrollbar-thumb:hover{
-    background:#244595;
+::-webkit-scrollbar-thumb:hover {
+    background: #0a3a6b;
 }
 
 /* FONTS */
