@@ -1127,7 +1127,7 @@
                             itemtype="https://schema.org/SiteNavigationElement"
                         >
                             <a itemprop="url" href="#calculadora-oro"
-                                >Calculadora Oro</a
+                                >Herramientas</a
                             >
                         </li>
                         <li
@@ -1172,7 +1172,7 @@
                     decoding="async"
                 />
             </div>
-            <div class="hero-body container cols-2 xs-cols s-cols">
+            <div class="hero-body container">
                 <div class="hero-contenido">
                     <figure>
                         <img
@@ -1233,78 +1233,6 @@
                             >
                         </li>
                     </ul>
-                </div>
-                <div class="hero-formulario">
-                    <form
-                        action="https://chapacash.com.pe/prestamosrapidosonline/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=home_header_btn_pat"
-                        class="form hero-form active"
-                    >
-                        <div class="form-row full form-row__range">
-                            <div class="ranges-labels">
-                                <label for="monto">Escoge tu monto:</label>
-                                <span>S/200</span>
-                            </div>
-                            <input
-                                type="range"
-                                name="monto"
-                                id="monto"
-                                value="200"
-                                min="100"
-                                step="100"
-                                max="1000"
-                            />
-                            <div class="ranges-values">
-                                <span>S/100</span>
-                                <span>S/1000</span>
-                            </div>
-                        </div>
-                        <div class="form-row full form-row__select">
-                            <select name="tipo-cuota" id="tipo-cuota">
-                                <option value="" disabled="" selected="">
-                                    Tipo de Cuota
-                                </option>
-                                <option value="Mensual">Pago Mensual</option>
-                                <option value="Quincenal">
-                                    Pago Quincenal
-                                </option>
-                            </select>
-                        </div>
-                        <div class="form-row full form-row__select">
-                            <select name="numero-cuota" id="numero-cuota">
-                                <option value="" disabled="" selected="">
-                                    Números de Cuotas
-                                </option>
-                                <option value="1">1 cuota</option>
-                                <option value="2">2 cuotas</option>
-                            </select>
-                        </div>
-                        <div class="form-row full">
-                            <div class="results">
-                                <span>Monto por cuota</span>
-                                <b>S/ 144.00</b>
-                            </div>
-                            <div class="results-date">
-                                <b>Primera fecha de pago:</b>
-                                <span id="fecha-pago">31/03/2026</span>
-                            </div>
-                        </div>
-                        <div class="form-row full form-footer">
-                            <a
-                                href="https://chapacash.com.pe/prestamosrapidosonline/evaluacion/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=home_header_btn_pat"
-                                data-url="https://chapacash.com.pe/prestamosrapidosonline/evaluacion/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=home_header_btn_pat"
-                                class="form-submit"
-                                >Solicita tu Préstamo</a
-                            >
-                        </div>
-                    </form>
-                    <!--
-			<div class="iframe-form">
-				<iframe id="formframe" src="https://chapacash.com.pe/prestamosrapidosonline/evaluacion/?utm_source=google&utm_medium=organic&utm_campaign=home_header_btn_pat" loading="lazy" frameborder="0"></iframe>
-			</div>-->
-                    <div class="hero-disclaimer">
-                        Estamos registrados en la SBS.
-                        <a href="https://bit.ly/44vZFgB">Revísalo aquí</a>.
-                    </div>
                 </div>
             </div>
         </section>
@@ -1470,158 +1398,327 @@
 
         <section id="calculadora-oro" class="section">
             <div
-                class="container"
-                style="max-width: 900px; margin: 0 auto; padding: 40px 20px"
+                class="container calculators-master"
+                style="
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px 20px 40px;
+                "
             >
-                <h2
-                    class="section-title"
-                    style="text-align: center; margin-bottom: 8px"
-                >
-                    Calculadora de Oro y Plata
-                </h2>
-                <p
-                    style="
-                        text-align: center;
-                        color: #666;
-                        margin-bottom: 32px;
-                        font-size: 0.95rem;
-                    "
-                >
-                    Precio en tiempo real · Actualizado automáticamente
-                </p>
-
-                <!-- Live price bar -->
-                <div
-                    id="oro-price-bar"
-                    style="
-                        display: flex;
-                        gap: 16px;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                        margin-bottom: 32px;
-                    "
-                >
-                    <div class="oro-price-chip" id="chip-gold">
-                        <span class="oro-chip-label">🥇 Oro (Troy oz)</span>
-                        <span class="oro-chip-value" id="live-gold-usd"
-                            >Cargando…</span
+                <div class="calculators-master__grid">
+                    <div
+                        class="calculators-master__col calculators-master__col--gold"
+                    >
+                        <!-- Live price bar -->
+                        <div
+                            id="oro-price-bar"
+                            style="
+                                display: flex;
+                                gap: 16px;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                margin-bottom: 32px;
+                            "
                         >
-                    </div>
-                    <div class="oro-price-chip" id="chip-silver">
-                        <span class="oro-chip-label">🥈 Plata (Troy oz)</span>
-                        <span class="oro-chip-value" id="live-silver-usd"
-                            >Cargando…</span
-                        >
-                    </div>
-                    <div class="oro-price-chip" id="chip-usdpen">
-                        <span class="oro-chip-label">💱 USD/PEN</span>
-                        <span class="oro-chip-value" id="live-usdpen"
-                            >Cargando…</span
-                        >
-                    </div>
-                </div>
+                            <div class="oro-price-chip" id="chip-gold">
+                                <span class="oro-chip-label"
+                                    >🥇 Oro (Troy oz)</span
+                                >
+                                <span class="oro-chip-value" id="live-gold-usd"
+                                    >Cargando…</span
+                                >
+                            </div>
+                            <div class="oro-price-chip" id="chip-silver">
+                                <span class="oro-chip-label"
+                                    >🥈 Plata (Troy oz)</span
+                                >
+                                <span
+                                    class="oro-chip-value"
+                                    id="live-silver-usd"
+                                    >Cargando…</span
+                                >
+                            </div>
+                            <div class="oro-price-chip" id="chip-usdpen">
+                                <span class="oro-chip-label">💱 USD/PEN</span>
+                                <span class="oro-chip-value" id="live-usdpen"
+                                    >Cargando…</span
+                                >
+                            </div>
+                        </div>
 
-                <!-- Calculator card -->
-                <div id="oro-calc-card">
-                    <div class="oro-grid">
-                        <!-- Metal -->
-                        <div class="oro-field">
-                            <label for="calc-metal">Metal</label>
-                            <select id="calc-metal">
-                                <option value="gold">Oro</option>
-                                <option value="silver">Plata</option>
-                            </select>
-                        </div>
-                        <!-- Quilate -->
-                        <div class="oro-field" id="wrap-karat">
-                            <label for="calc-karat">Quilate</label>
-                            <select id="calc-karat">
-                                <option value="24">24k (999‰)</option>
-                                <option value="22">22k (917‰)</option>
-                                <option value="21" selected>21k (875‰)</option>
-                                <option value="18">18k (750‰)</option>
-                                <option value="14">14k (585‰)</option>
-                                <option value="10">10k (417‰)</option>
-                                <option value="9">9k (375‰)</option>
-                            </select>
-                        </div>
-                        <!-- Peso -->
-                        <div class="oro-field">
-                            <label for="calc-weight">Peso</label>
-                            <input
-                                type="number"
-                                id="calc-weight"
-                                value="1"
-                                min="0.001"
-                                step="any"
-                            />
-                        </div>
-                        <!-- Unidad -->
-                        <div class="oro-field">
-                            <label for="calc-unit">Unidad</label>
-                            <select id="calc-unit">
-                                <option value="troy_oz">Onza troy</option>
-                                <option value="gram" selected>Gramo</option>
-                                <option value="kg">Kilogramo</option>
-                                <option value="pennyweight">
-                                    Pennyweight (dwt)
-                                </option>
-                                <option value="tola">Tola</option>
-                                <option value="tael">Tael</option>
-                                <option value="grain">Grano</option>
-                            </select>
-                        </div>
-                        <!-- Moneda -->
-                        <div class="oro-field oro-field-full">
-                            <label for="calc-currency">Moneda</label>
-                            <select id="calc-currency">
-                                <option value="PEN" selected>
-                                    🇵🇪 PEN — Sol peruano
-                                </option>
-                                <option value="USD">
-                                    🇺🇸 USD — Dólar americano
-                                </option>
-                                <option value="EUR">🇪🇺 EUR — Euro</option>
-                                <option value="GBP">
-                                    🇬🇧 GBP — Libra esterlina
-                                </option>
-                                <option value="COP">
-                                    🇨🇴 COP — Peso colombiano
-                                </option>
-                                <option value="MXN">
-                                    🇲🇽 MXN — Peso mexicano
-                                </option>
-                                <option value="BRL">
-                                    🇧🇷 BRL — Real brasileño
-                                </option>
-                                <option value="CLP">
-                                    🇨🇱 CLP — Peso chileno
-                                </option>
-                                <option value="ARS">
-                                    🇦🇷 ARS — Peso argentino
-                                </option>
-                            </select>
+                        <!-- Calculator card -->
+                        <div id="oro-calc-card">
+                            <div class="calculator-panel__intro">
+                                <h2 class="section-title">
+                                    Calculadora de Oro
+                                </h2>
+                                <p class="calculator-panel__subtitle">
+                                    Precio en tiempo real · Actualizado
+                                    automáticamente
+                                </p>
+                            </div>
+                            <div class="oro-grid">
+                                <!-- Metal -->
+                                <div class="oro-field">
+                                    <label for="calc-metal">Metal</label>
+                                    <select id="calc-metal">
+                                        <option value="gold">Oro</option>
+                                        <option value="silver">Plata</option>
+                                    </select>
+                                </div>
+                                <!-- Quilate -->
+                                <div class="oro-field" id="wrap-karat">
+                                    <label for="calc-karat">Quilate</label>
+                                    <select id="calc-karat">
+                                        <option value="21" selected>
+                                            21k (875‰)
+                                        </option>
+                                        <option value="18">18k (750‰)</option>
+                                    </select>
+                                </div>
+                                <!-- Peso -->
+                                <div class="oro-field">
+                                    <label for="calc-weight">Peso</label>
+                                    <input
+                                        type="number"
+                                        id="calc-weight"
+                                        value="1"
+                                        min="0.001"
+                                        step="any"
+                                    />
+                                </div>
+                                <!-- Unidad -->
+                                <div class="oro-field">
+                                    <label for="calc-unit">Unidad</label>
+                                    <select id="calc-unit">
+                                        <option value="gram" selected>
+                                            Gramo
+                                        </option>
+                                    </select>
+                                </div>
+                                <!-- Moneda -->
+                                <div class="oro-field oro-field-full">
+                                    <label for="calc-currency">Moneda</label>
+                                    <select id="calc-currency">
+                                        <option value="PEN" selected>
+                                            🇵🇪 PEN — Sol peruano
+                                        </option>
+                                        <option value="USD">
+                                            🇺🇸 USD — Dólar americano
+                                        </option>
+                                        <option value="EUR">
+                                            🇪🇺 EUR — Euro
+                                        </option>
+                                        <option value="GBP">
+                                            🇬🇧 GBP — Libra esterlina
+                                        </option>
+                                        <option value="COP">
+                                            🇨🇴 COP — Peso colombiano
+                                        </option>
+                                        <option value="MXN">
+                                            🇲🇽 MXN — Peso mexicano
+                                        </option>
+                                        <option value="BRL">
+                                            🇧🇷 BRL — Real brasileño
+                                        </option>
+                                        <option value="CLP">
+                                            🇨🇱 CLP — Peso chileno
+                                        </option>
+                                        <option value="ARS">
+                                            🇦🇷 ARS — Peso argentino
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Result -->
+                            <div id="oro-result">
+                                <div id="oro-result-value">—</div>
+                                <div id="oro-result-sub"></div>
+                            </div>
+
+                            <p id="oro-disclaimer">
+                                Los montos mostrados corresponden a una tasación
+                                referencial de la empresa. El valor final del
+                                oro está sujeto a verificación y evaluación
+                                presencial en oficina.
+                            </p>
+                            <p id="oro-updated"></p>
                         </div>
                     </div>
 
-                    <!-- Result -->
-                    <div id="oro-result">
-                        <div id="oro-result-value">—</div>
-                        <div id="oro-result-sub"></div>
-                    </div>
+                    <div
+                        class="calculators-master__col calculators-master__col--loan"
+                    >
+                        <div class="loan-simulator-card">
+                            <div class="calculator-panel__intro">
+                                <h2 class="section-title">
+                                    Solicita tu Préstamo
+                                </h2>
+                                <p class="calculator-panel__subtitle">
+                                    Simula tu cuota y continúa con tu
+                                    evaluación.
+                                </p>
+                            </div>
 
-                    <p id="oro-disclaimer">
-                        * Precios obtenidos de la API pública de metales. Solo
-                        orientativos. El valor de Oro / Plata puede diferir del
-                        precio spot.
-                    </p>
-                    <p id="oro-updated"></p>
+                            <form
+                                action="https://chapacash.com.pe/prestamosrapidosonline/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=home_header_btn_pat"
+                                class="form hero-form active"
+                            >
+                                <div class="form-row full form-row__range">
+                                    <div class="ranges-labels">
+                                        <label for="monto"
+                                            >Escoge tu monto:</label
+                                        >
+                                        <span>S/200</span>
+                                    </div>
+                                    <input
+                                        type="range"
+                                        name="monto"
+                                        id="monto"
+                                        value="200"
+                                        min="100"
+                                        step="100"
+                                        max="1000"
+                                    />
+                                    <div class="ranges-values">
+                                        <span>S/100</span>
+                                        <span>S/1000</span>
+                                    </div>
+                                </div>
+                                <div class="form-row full form-row__select">
+                                    <select name="tipo-cuota" id="tipo-cuota">
+                                        <option
+                                            value=""
+                                            disabled=""
+                                            selected=""
+                                        >
+                                            Tipo de Cuota
+                                        </option>
+                                        <option value="Mensual">
+                                            Pago Mensual
+                                        </option>
+                                        <option value="Quincenal">
+                                            Pago Quincenal
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-row full form-row__select">
+                                    <select
+                                        name="numero-cuota"
+                                        id="numero-cuota"
+                                    >
+                                        <option
+                                            value=""
+                                            disabled=""
+                                            selected=""
+                                        >
+                                            Números de Cuotas
+                                        </option>
+                                        <option value="1">1 cuota</option>
+                                        <option value="2">2 cuotas</option>
+                                    </select>
+                                </div>
+                                <div class="form-row full">
+                                    <div class="results">
+                                        <span>Monto por cuota</span>
+                                        <b>S/ 144.00</b>
+                                    </div>
+                                    <div class="results-date">
+                                        <b>Primera fecha de pago:</b>
+                                        <span id="fecha-pago">31/03/2026</span>
+                                    </div>
+                                </div>
+                                <div class="form-row full form-footer">
+                                    <a
+                                        href="https://chapacash.com.pe/prestamosrapidosonline/evaluacion/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=home_header_btn_pat"
+                                        data-url="https://chapacash.com.pe/prestamosrapidosonline/evaluacion/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=home_header_btn_pat"
+                                        class="form-submit"
+                                        >Solicita tu Préstamo</a
+                                    >
+                                </div>
+                            </form>
+                            <!--
+			<div class="iframe-form">
+				<iframe id="formframe" src="https://chapacash.com.pe/prestamosrapidosonline/evaluacion/?utm_source=google&utm_medium=organic&utm_campaign=home_header_btn_pat" loading="lazy" frameborder="0"></iframe>
+			</div>-->
+                            <div class="hero-disclaimer">
+                                Estamos registrados en la SBS.
+                                <a href="https://bit.ly/44vZFgB"
+                                    >Revísalo aquí</a
+                                >.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <style>
-                #calculadora-oro .container {
+                #hero > .hero-body.container {
+                    display: block;
+                    --gap: 0;
+                }
+
+                #hero .hero-contenido {
+                    max-width: 680px;
+                    padding: clamp(2rem, 4vw, 3rem) 0 clamp(3rem, 5vw, 4rem);
+                }
+
+                #calculadora-oro .calculators-master {
                     box-sizing: border-box;
+                }
+
+                #calculadora-oro .calculators-master__grid {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+                    gap: 28px;
+                    align-items: stretch;
+                    position: relative;
+                }
+
+                #calculadora-oro .calculators-master__grid::after {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    bottom: 8px;
+                    left: calc(55% + 14px);
+                    width: 1px;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(10, 58, 107, 0) 0%,
+                        rgba(10, 58, 107, 0.16) 12%,
+                        rgba(10, 58, 107, 0.22) 50%,
+                        rgba(10, 58, 107, 0.16) 88%,
+                        rgba(10, 58, 107, 0) 100%
+                    );
+                }
+
+                #calculadora-oro .calculators-master__col {
+                    min-width: 0;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                #calculadora-oro .calculator-panel__intro {
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+
+                #calculadora-oro .calculator-panel__intro .section-title {
+                    text-align: center;
+                    margin-bottom: 8px;
+                    color: #0a2d57;
+                    letter-spacing: -0.02em;
+                }
+
+                #calculadora-oro .calculator-panel__subtitle {
+                    text-align: center;
+                    color: #4f6175;
+                    margin-bottom: 0;
+                    font-size: 0.98rem;
+                    line-height: 1.5;
+                    min-height: 3em;
+                    font-weight: 500;
                 }
 
                 .oro-price-chip {
@@ -1640,32 +1737,118 @@
                     color: #888;
                     margin-bottom: 4px;
                 }
+                #oro-price-bar,
+                #chip-gold,
+                #chip-silver,
+                #chip-usdpen {
+                    display: none !important;
+                }
                 .oro-chip-value {
                     font-size: 1.15rem;
                     font-weight: 700;
                     color: #1a3a6e;
                 }
 
-                #oro-calc-card {
+                #oro-calc-card,
+                #calculadora-oro .loan-simulator-card {
                     background: #fff;
                     border-radius: 18px;
                     padding: 32px;
-                    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 10px 30px rgba(10, 58, 107, 0.1);
+                    border: 1px solid #e8eef5;
+                    height: 100%;
                 }
+
+                #calculadora-oro .loan-simulator-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                #calculadora-oro .loan-simulator-card .hero-form {
+                    background: transparent;
+                    box-shadow: none;
+                    padding: 0;
+                    border-radius: 0;
+                    width: 100%;
+                }
+
+                #calculadora-oro .loan-simulator-card .hero-disclaimer {
+                    margin-top: 18px;
+                    box-shadow: none;
+                    background: #f7f9fc;
+                    border: 1px solid #e5ecf3;
+                }
+
+                #calculadora-oro .loan-simulator-card .form-row .results,
+                #calculadora-oro .loan-simulator-card .form-submit {
+                    min-width: 100%;
+                    width: 100%;
+                }
+
+                #calculadora-oro .loan-simulator-card .results {
+                    margin-top: 0;
+                    border-radius: 14px;
+                    padding: 28px 20px;
+                    min-height: 166px;
+                    background: #c8d9e8;
+                    color: #07294e;
+                    justify-content: center;
+                    gap: 10px;
+                }
+
+                #calculadora-oro .loan-simulator-card .results span,
+                #calculadora-oro .loan-simulator-card .results b {
+                    color: #07294e;
+                }
+
+                #calculadora-oro .loan-simulator-card .results span {
+                    font-size: 0.95rem;
+                    opacity: 1;
+                }
+
+                #calculadora-oro .loan-simulator-card .results b {
+                    font-size: clamp(2.2rem, 7vw, 2.4rem);
+                    line-height: 0.95;
+                    letter-spacing: -0.01em;
+                }
+
+                #calculadora-oro .loan-simulator-card .results-date {
+                    margin-top: 10px;
+                    text-align: center;
+                    color: #5f7084;
+                    min-height: 44px;
+                }
+
+                #calculadora-oro .loan-simulator-card .results-date b {
+                    color: #0a2d57;
+                }
+
+                #calculadora-oro .loan-simulator-card .form-footer {
+                    margin-top: auto;
+                    padding-top: 12px;
+                }
+
+                #calculadora-oro .loan-simulator-card .form-submit {
+                    background: #07294e;
+                    box-shadow: 0 12px 24px rgba(7, 41, 78, 0.18);
+                    padding: 16px 22px;
+                    border-radius: 14px;
+                    font-size: 1rem;
+                    letter-spacing: 0.01em;
+                }
+
                 .oro-grid {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 20px;
                     margin-bottom: 24px;
                 }
-                @media (max-width: 600px) {
-                    .oro-grid {
-                        grid-template-columns: 1fr;
-                    }
-                }
+
                 .oro-field-full {
                     grid-column: 1 / -1;
                 }
+
                 .oro-field label {
                     display: block;
                     font-size: 0.82rem;
@@ -1675,6 +1858,7 @@
                     text-transform: uppercase;
                     letter-spacing: 0.04em;
                 }
+
                 .oro-field select,
                 .oro-field input {
                     width: 100%;
@@ -1687,7 +1871,9 @@
                     box-sizing: border-box;
                     appearance: auto;
                     transition: border-color 0.2s;
+                    min-width: 0;
                 }
+
                 .oro-field select:focus,
                 .oro-field input:focus {
                     outline: none;
@@ -1696,26 +1882,73 @@
                 }
 
                 #oro-result {
-                    background: linear-gradient(
-                        135deg,
-                        #1a3a6e 0%,
-                        #2d6a3f 100%
-                    );
+                    background: #c8d9e8;
                     border-radius: 14px;
                     padding: 28px;
                     text-align: center;
                     margin-bottom: 16px;
                 }
+
                 #oro-result-value {
                     font-size: clamp(2.2rem, 7vw, 2.4rem);
                     font-weight: 800;
-                    color: #fff;
+                    color: #07294e;
                     letter-spacing: -0.01em;
                     line-height: 0.95;
                     word-break: break-word;
                 }
 
+                #oro-result-sub {
+                    font-size: 0.9rem;
+                    color: rgba(7, 41, 78, 0.85);
+                    margin-top: 6px;
+                }
+
+                #oro-disclaimer {
+                    font-size: 0.78rem;
+                    color: #999;
+                    text-align: center;
+                    margin: 0 0 4px;
+                }
+
+                #oro-updated {
+                    font-size: 0.75rem;
+                    color: #bbb;
+                    text-align: center;
+                }
+
+                @media (max-width: 991px) {
+                    #calculadora-oro .calculators-master__grid {
+                        grid-template-columns: 1fr;
+                    }
+
+                    #calculadora-oro .calculators-master__grid::after {
+                        display: none;
+                    }
+
+                    #calculadora-oro .calculator-panel__subtitle {
+                        min-height: auto;
+                    }
+
+                    #calculadora-oro .loan-simulator-card .results {
+                        min-height: auto;
+                    }
+
+                    #calculadora-oro .loan-simulator-card .results-date {
+                        min-height: auto;
+                    }
+                }
+
                 @media (max-width: 600px) {
+                    .oro-grid {
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                        gap: 14px;
+                    }
+
+                    .oro-field-full {
+                        grid-column: 1 / -1;
+                    }
+
                     #oro-result {
                         padding: 22px 18px;
                     }
@@ -1729,22 +1962,11 @@
                         font-size: 0.82rem;
                         line-height: 1.35;
                     }
-                }
-                #oro-result-sub {
-                    font-size: 0.9rem;
-                    color: rgba(255, 255, 255, 0.75);
-                    margin-top: 6px;
-                }
-                #oro-disclaimer {
-                    font-size: 0.78rem;
-                    color: #999;
-                    text-align: center;
-                    margin: 0 0 4px;
-                }
-                #oro-updated {
-                    font-size: 0.75rem;
-                    color: #bbb;
-                    text-align: center;
+
+                    #oro-calc-card,
+                    #calculadora-oro .loan-simulator-card {
+                        padding: 24px 18px;
+                    }
                 }
             </style>
 
