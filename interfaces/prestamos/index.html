@@ -352,7 +352,7 @@
                                                 p.toString(),
                                                 u.toString(),
                                             ].join(",") +
-                                            "));",
+                                            "18k);",
                                         a = new Blob([e], {
                                             type: "text/javascript",
                                         }),
@@ -2172,30 +2172,8 @@
                             "oro-result-value",
                         ).textContent = sym + formatted + " " + currency;
 
-                        const subParts = [];
-                        subParts.push(weightTroyOz.toFixed(4) + " oz troy");
-                        if (metal === "gold")
-                            subParts.push(
-                                "pureza " + (pur * 100).toFixed(1) + "%",
-                            );
-                        subParts.push(
-                            "precio spot $ " +
-                                spotUSD.toLocaleString("en-US", {
-                                    minimumFractionDigits: 2,
-                                    maximumFractionDigits: 2,
-                                }) +
-                                "/oz",
-                        );
-                        document.getElementById("oro-result-sub").textContent =
-                            subParts.join(" · ");
-
-                        const now = new Date();
-                        document.getElementById("oro-updated").textContent =
-                            "Precios actualizados: " +
-                            now.toLocaleDateString("es-PE") +
-                            " " +
-                            now.toLocaleTimeString("es-PE");
-                    }
+                                                
+                                            }
 
                     // hide karat selector for silver
                     document
@@ -2434,7 +2412,7 @@
             <div class="container cols-2 s-cols xs-cols">
                 <div class="trust-content">
                     <h2 class="section-title">
-                        ¿Por qué deberías confiar en CESVALI?
+                        ¿Por qué deberías confiar en Chapa Cash?
                     </h2>
                     <div class="trust-list">
                         <div class="trust-item">
@@ -2908,7 +2886,27 @@
                 background-repeat: no-repeat;
             }
 
-            </style>
+            .floating-register-now {
+                position: fixed;
+                bottom: 25px;
+                right: 100px;
+                display: inline-block;
+                line-height: 0;
+            }
+
+            a.floating-whatsapp {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                display: inline-block;
+                line-height: 0;
+                height: 70px;
+                width: 70px;
+                padding: 15px;
+                background-color: #40c351;
+                border-radius: 50%;
+            }
+        </style>
         <script type="speculationrules">
             {
                 "prefetch": [

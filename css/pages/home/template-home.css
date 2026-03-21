@@ -89,7 +89,6 @@
 }
 .product {
     overflow: hidden;
-    cursor: pointer;
 }
 .product > * {
     z-index: 1;
@@ -116,26 +115,6 @@
 }
 #products {
     --content-width: 900px;
-}
-
-/* Estilos personalizados para centrar y separar tarjetas */
-#products .cols-3.s-cols-2.xs-cols-2 {
-    justify-content: center;
-    gap: 40px;
-}
-
-/* Para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    #products .cols-3.s-cols-2.xs-cols-2 {
-        gap: 30px;
-    }
-}
-
-/* Para pantallas muy pequeñas */
-@media screen and (max-width: 480px) {
-    #products .cols-3.s-cols-2.xs-cols-2 {
-        gap: 20px;
-    }
 }
 
 #trust {
