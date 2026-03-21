@@ -1,0 +1,180 @@
+/*
+ * ============================================================
+ *  MOBILE MENU OVERRIDE — Diseño blanco limpio
+ *  Aplica solo en pantallas <= 767px
+ *  Archivo: css/global/mobile-menu.css
+ * ============================================================
+ */
+
+@media screen and (max-width: 767px) {
+
+    /* ---- HEADER: siempre visible encima del menú ---- */
+    #header {
+        z-index: 1002 !important;
+        background: #fff !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    }
+
+    /* Hamburger de 3 líneas — ocultar la 4ta barra decorativa */
+    #header .rnz-menu-icon span:nth-child(4) {
+        display: none !important;
+    }
+
+    /* Reposicionar la 3ra línea para que quede equidistante */
+    #header .rnz-menu-icon span:nth-child(3) {
+        top: 16px !important;
+        opacity: 1 !important;
+    }
+
+    /* ---- HAMBURGER → X: mantenemos la animación existente ---- */
+    #header .rnz-menu-icon span {
+        background: #07294e !important;
+    }
+
+    /* ---- MENÚ OVERLAY: blanco en lugar de azul oscuro ---- */
+    #menu-principal-container {
+        background: #fff !important;
+        top: 70px !important;               /* debajo del header fijo */
+        height: calc(100dvh - 70px) !important;
+        z-index: 1001 !important;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    /* ---- LISTA DE ÍTEMS ---- */
+    .menu-principal {
+        padding: 20px 24px 120px !important; /* 120px abajo para los socials */
+    }
+
+    .menu-principal > li {
+        border-bottom: 1px solid rgba(0,0,0,0.07) !important;
+    }
+
+    .menu-principal > li:last-child {
+        border-bottom: none !important;
+    }
+
+    /* Texto de los ítems: gris oscuro, sin mayúsculas */
+    .menu-principal > li > a {
+        color: #555 !important;
+        font-size: 17px !important;
+        font-weight: 500 !important;
+        padding: 22px 4px !important;
+        text-transform: none !important;
+        letter-spacing: 0 !important;
+    }
+
+    .menu-principal > li > a:hover {
+        color: #07294e !important;
+    }
+
+    /* ---- FLECHA PARA ÍTEMS CON HIJOS (chevron gris) ---- */
+    .menu-principal > li.has-children:not(.btn-login, .btn-registro) > a {
+        background-image: url('data:image/svg+xml,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 8L0.803848 0.5L11.1962 0.500001L6 8Z" fill="%23999"/></svg>') !important;
+        background-size: 12px !important;
+        background-position: calc(100% - 4px) center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    /* ---- SUB-MENÚ ---- */
+    .menu-principal > li > ul.sub-menu {
+        background: rgba(0,0,0,0.02) !important;
+        border-radius: 6px;
+        margin-bottom: 8px;
+    }
+
+    .menu-principal > li > ul.sub-menu > li {
+        border-bottom: 1px solid rgba(0,0,0,0.04) !important;
+    }
+
+    .menu-principal > li > ul.sub-menu > li:last-child {
+        border-bottom: none !important;
+    }
+
+    .menu-principal > li > ul.sub-menu > li a {
+        color: #888 !important;
+        font-size: 15px !important;
+    }
+
+    .menu-principal > li > ul.sub-menu > li a:hover {
+        color: #07294e !important;
+    }
+
+    .menu-principal > li > ul.sub-menu > li > ul.sub-menu > li a {
+        color: #aaa !important;
+    }
+
+    .menu-principal > li > ul.sub-menu > li.active > a {
+        background-color: rgba(7,41,78,0.05) !important;
+        color: #07294e !important;
+    }
+
+    /* ---- ICONOS SOCIALES: círculos grises en la parte inferior ---- */
+    .header-socials {
+        position: absolute !important;
+        bottom: 28px !important;
+        left: 24px !important;
+        right: 24px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .header-socials ul {
+        display: flex !important;
+        gap: 16px !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .header-socials ul li {
+        margin: 0 !important;
+    }
+
+    /* Círculo gris igual que el diseño de escritorio */
+    .header-socials ul li a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 50% !important;
+        background-color: #b0b0b0 !important;
+        transition: background-color 0.25s ease !important;
+        opacity: 1 !important;
+    }
+
+    .header-socials ul li a:hover {
+        background-color: #07294e !important;
+    }
+
+    .header-socials ul li a img {
+        width: 20px !important;
+        height: 20px !important;
+        object-fit: contain !important;
+        filter: brightness(0) invert(1) !important;
+    }
+
+    /* ---- MENÚ PRINCIPAL CONTAINER: mostrar header-socials dentro ---- */
+    #header.active #menu-principal-container {
+        display: flex !important;
+        flex-direction: column !important;
+        position: fixed !important;
+    }
+
+    /* Ocultar versión escritorio de socials en móvil */
+    .header-socials--desktop {
+        display: none !important;
+    }
+
+} /* fin @media 767px */
+
+/* En escritorio: ocultar los socials que están dentro del nav */
+@media screen and (min-width: 768px) {
+    #menu-principal-container .header-socials {
+        display: none !important;
+    }
+    .header-socials--desktop {
+        display: flex !important;
+    }
+}
