@@ -427,8 +427,53 @@ body {
 #header > .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 200px;
+}
+
+.header-socials {
+    display: flex;
+    align-items: center;
+}
+
+.header-socials-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-socials-list li {
+    display: flex;
+    align-items: center;
+}
+
+.header-socials-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #909090;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.header-socials-list a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    background-color: #0E3463;
+}
+
+.header-socials-list img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 #header .rnz-menu-icon {
@@ -1322,5 +1367,65 @@ ul.pagination > li > a:hover {
 
     img.popimgmovil {
         display: none;
+    }
+}
+
+/* WhatsApp Floating Button - Hover Effects */
+.flotantewsp {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.floating-register-now {
+    position: fixed;
+    bottom: 25px;
+    right: 100px;
+    display: inline-block;
+    line-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: inline-block;
+    line-height: 0;
+    height: 70px;
+    width: 70px;
+    padding: 15px;
+    background-color: #40c351;
+    border-radius: 50%;
+    z-index: 1001;
+    transition: transform 0.2s ease-in-out;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* Show text on hover */
+.floating-whatsapp:hover ~ .floating-register-now,
+.flotantewsp:hover .floating-register-now {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* Fallback for older browsers */
+@media (prefers-reduced-motion: reduce) {
+    .floating-register-now {
+        transition: none;
+    }
+    
+    .floating-whatsapp {
+        transition: none;
     }
 }
